@@ -38,7 +38,7 @@ pipeline{
 				bat "docker container prune -f"
 				bat "docker rmi -f api-gateway"
 				bat "docker build -t api-gateway ."
-				bat "docker run --name api-gateway -p 8090:8090 -d -e eureka_client_serviceurl_defaultzone=http://172.17.0.4:8070/eureka api-gateway"
+				bat "docker run --name api-gateway -p 8090:8090 -d -e eureka_client_serviceurl_defaultzone=http://172.17.0.2:8070/eureka api-gateway"
 			}
 		}
 		
